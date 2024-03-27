@@ -5,12 +5,11 @@ function App() {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [fullname, setFullname] = useState("");
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if(firstname && lastname) {
       setFullname(`${firstname} ${lastname}`);
-      setFirstname("");
-      setLastname("");
       console.log("Form Submitted!");
     } 
   }
@@ -19,7 +18,7 @@ function App() {
     <>
       <div className='app'>
         <h1>Full Name Display</h1>
-        <form  action="/"className='userform' onSubmit={handleSubmit}>
+        <form className='userform' onSubmit={handleSubmit}>
           <label htmlFor="firstname">First Name:</label>
           <input 
             type="text" 
@@ -27,10 +26,7 @@ function App() {
             name='firstname'
             required
             value={firstname}
-            onChange={(e)=> {
-              setFirstname(e.target.value);
-              // setFullname("");
-            }}  
+            onChange={(e) => setFirstname(e.target.value)}  
           />
 
           <label htmlFor="lastname">Last Name:</label>
@@ -40,10 +36,7 @@ function App() {
             id="lastname"
             required
             value={lastname}
-            onChange={(e) => {
-              setLastname(e.target.value);
-              // setFullname("");
-            }}
+            onChange={(e) => setLastname(e.target.value)}
           />
           <button type='submit' >
             Submit
