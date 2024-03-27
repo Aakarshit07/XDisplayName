@@ -29,7 +29,7 @@ function App() {
             value={firstname}
             onChange={(e)=> {
               setFirstname(e.target.value);
-              setFullname("");
+              // setFullname("");
             }}  
           />
 
@@ -42,7 +42,7 @@ function App() {
             value={lastname}
             onChange={(e) => {
               setLastname(e.target.value);
-              setFullname("");
+              // setFullname("");
             }}
           />
           <button type='submit' >
