@@ -46,7 +46,7 @@ function App() {
             }}
           />
           <button 
-            type='button'
+            type='submit'
             onClick={handleSubmit}
             >
             Submit
