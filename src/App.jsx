@@ -6,7 +6,7 @@ function App() {
   const [lastname, setLastname] = useState("");
   const [fullname, setFullname] = useState("");
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if(firstname && lastname) {
       setFullname(`${firstname} ${lastname}`);
       setFirstname("");
@@ -19,7 +19,7 @@ function App() {
     <>
       <div className='app'>
         <h1>Full Name Display</h1>
-        <form className='userform' onSubmit={handleSubmit}>
+        <form  action="/"className='userform' onSubmit={handleSubmit}>
           <label htmlFor="firstname">First Name:</label>
           <input 
             type="text" 
