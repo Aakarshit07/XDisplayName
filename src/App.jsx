@@ -11,9 +11,7 @@ function App() {
       setFullname(`${firstname} ${lastname}`);
       setFirstname("");
       setLastname("");
-    //   console.log("firstname",firstname);
-    //   console.log("lastname", lastname);
-    //   console.log("Previous fullname State: ", fullname);
+      console.log("Form Submitted!");
     } 
   }
 
@@ -21,7 +19,7 @@ function App() {
     <>
       <div className='app'>
         <h1>Full Name Display</h1>
-        <form action="" className='userform'>
+        <form className='userform' onSubmit={handleSubmit}>
           <label htmlFor="firstname">First Name:</label>
           <input 
             type="text" 
@@ -47,10 +45,7 @@ function App() {
               setFullname("");
             }}
           />
-          <button 
-            type='submit'
-            onClick={handleSubmit}
-            >
+          <button type='submit' >
             Submit
           </button>
         </form>
